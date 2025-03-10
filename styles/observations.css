@@ -236,3 +236,61 @@ img {
         text-decoration: underline;
         
     }
+
+    .slideshow {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden; /* Prevents overflow issues */
+    }
+    
+    .slide {
+        display: none;
+        width: 100%;
+        text-align: center; /* Centers the image horizontally */
+    }
+    
+    .slide img {
+        max-width: 100%; /* Ensures image doesn't exceed container width */
+        max-height: 70vh; /* Limits height to fit within viewport, adjust as needed */
+        width: auto; /* Allows natural width for vertical images */
+        height: auto; /* Maintains aspect ratio */
+        display: inline-block; /* Works with text-align: center */
+        object-fit: contain; /* Ensures the entire image is visible without cropping */
+    }
+    
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        opacity: 0.5;
+        z-index: 10; /* Ensures arrows stay above images */
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    .prev:hover, .next:hover {
+        opacity: 1;
+    }
+    
+    /* Fade animation */
+    .slide {
+        animation: fade 0.5s ease-in-out;
+    }
+    
+    @keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }

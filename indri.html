@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/observations.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+    <title>Nandini Gandhi</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <section class="left">
+            <div class="leftNest">
+
+                <a href="index.html">
+                    <h1>—nandini gandhi</h1>
+                </a>
+                <h2 class="gd"> Graphic Designer </h2>
+
+                <div class="projects">
+                    <h2> 1. Projects </h2>
+
+                    <ol type="1">
+    
+                        <li> <a href="indri.html"> Packaging+Branding | Indri </a> </li>
+                        <li> <a href="nami.html"> Packaging+Branding | Nami </a> </li>
+                        <li> <a href="dataphys.html"> Data Physicalization </a> </li>
+                        <li> <a href="visexp.html"> Infographic | Visual Explainer  </a> </li>
+                        <li> <a href="Kanta.html"> Type Design | Kanta  </a> </li>
+                        <li> <a href="https://nandinigandhi.github.io/nandini-gandhi-site/"> Web Design | Syn-Aesthetic </a> </li>
+                        <li> <a href="parametrics.html"> Parametrics+Generation </a> </li>
+                        <li> <a href="witness.html"> Film | 9pm </a> </li>
+                        <li> <a href="eclipsia.html"> Film | Eclipsia </a> </li>
+                        <li> <a href="hues.html">Publication | Hues of Persuation </a> </li>
+                    </ol>
+
+                    <h2> 2. Archives </h2>
+
+                    <ol type="1">
+
+                        <li> <a href="experimenta.html"> Experiments </a> </li>
+                        <li> <a href="photo.html"> Photography </a> </li>
+
+                    </ol>
+
+                    <h2> 3. Info & Contact </h2>
+
+                    <ol type="1">
+                        <li> <a href="info.html"> <i>Info</i></a> </li>
+                        <li> <a href="https://www.are.na/nandini-gandhi"> Are.na </a> </li>
+                        <li> <a href="mailto:nandinigandhi@ocadu.ca"> E-Mail </a> </li>
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="right">
+
+            <div class="rightMenu">
+
+                <div class="leftM">
+                    <h3> Indri </h3>
+                </div>
+
+                <div class="rightM">
+                    <div class="rightbox">
+                        <a href="info.html"> <i>Info</i> </a>
+                        <a href="https://www.are.na/nandini-gandhi"> Are.na </a>
+                        <a href="mailto:nandinigandhi@ocadu.ca"> E-Mail </a>
+                    </div>
+
+                    <div class="box">
+                        <a href="menu.html"> Menu </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stock">
+                <p>
+                    I wanted to try to create something out of my confort zone and I landed on rebranding the bottle of an Indin Whiskey company named Indri. The word 'Indri' in Sanskrit refers to the five senses: touch, taste, sight, sound, and smell and so I wanted to create a bottle that encopassed all five senses and created a sensory experience.
+                    <br><br>
+                    Here are the tools and software I used to create this piece of work: <br>
+                    — Adobe InDesign <br>
+                    — Adobe Illustrator <br>
+                    — Blender <br>
+                </p>
+            
+                <!-- Slideshow container -->
+                <div class="slideshow">
+                    <div class="slide">
+                        <img src="indri/final-copy.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="indri/meaning.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="indri/more-meaning.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="indri/trial2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="indri/trial3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="indri/trial4.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="indri/trial5.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="indri/trial6.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="indri/trial7.jpg" alt="">
+                    </div>
+            
+                    <!-- Navigation arrows -->
+                    <a class="prev" onclick="changeSlide(-1)">←</a>
+                    <a class="next" onclick="changeSlide(1)">→</a>
+                </div>
+            
+                <br><br>
+            
+                <p>
+                    I have included a lot of bottles that I created before reaching the final bottle to show process through iteration and how I approached the final form. 
+                    <!-- Rest of your text remains the same -->
+                </p>
+            </div>
+            
+            <!-- JavaScript at the bottom of the body -->
+            <script>
+                let currentSlide = 0;
+                const slides = document.querySelectorAll('.slide');
+                
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = i === index ? 'block' : 'none';
+                    });
+                }
+                
+                function changeSlide(n) {
+                    currentSlide += n;
+                    if (currentSlide >= slides.length) currentSlide = 0;
+                    if (currentSlide < 0) currentSlide = slides.length - 1;
+                    showSlide(currentSlide);
+                }
+                
+                // Show the first slide initially
+                showSlide(currentSlide);
+            </script>
+
+</body>
+
+</html>
