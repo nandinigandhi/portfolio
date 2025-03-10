@@ -25,17 +25,17 @@
                     <h2> 1. Projects </h2>
 
                     <ol type="1">
-
-                        <li> <a href="witness.html"> 9pm </a> </li>
+    
+                        <li> <a href="indri.html"> Packaging+Branding | Indri </a> </li>
+                        <li> <a href="nami.html"> Packaging+Branding | Nami </a> </li>
                         <li> <a href="dataphys.html"> Data Physicalization </a> </li>
-                        <li> <a href="visexp.html"> Visual Explainer  </a> </li>
-                        <li> <a href="https://nandinigandhi.github.io/nandini-gandhi-site/"> Syn-Aesthetic </a> </li>
+                        <li> <a href="visexp.html"> Infographic | Visual Explainer  </a> </li>
+                        <li> <a href="Kanta.html"> Type Design | Kanta  </a> </li>
+                        <li> <a href="https://nandinigandhi.github.io/nandini-gandhi-site/"> Web Design | Syn-Aesthetic </a> </li>
                         <li> <a href="parametrics.html"> Parametrics+Generation </a> </li>
-                        <li> <a href="eclipsia.html"> Eclipsia </a> </li>
-                        <li> <a href="observations.html"> Observations (My Process?) </a> </li>
-                        <li> <a href="hues.html"> Hues of Persuation </a> </li>
-                        <li> <a href="exhibition.html"> Exhibition </a> </li>
-
+                        <li> <a href="witness.html"> Film | 9pm </a> </li>
+                        <li> <a href="eclipsia.html"> Film | Eclipsia </a> </li>
+                        <li> <a href="hues.html">Publication | Hues of Persuation </a> </li>
                     </ol>
 
                     <h2> 2. Archives </h2>
@@ -44,7 +44,6 @@
 
                         <li> <a href="experimenta.html"> Experiments </a> </li>
                         <li> <a href="photo.html"> Photography </a> </li>
-                        <li> <a href="code.html"> Code Work </a> </li>
 
                     </ol>
 
@@ -67,7 +66,7 @@
             <div class="rightMenu">
 
                 <div class="leftM">
-                    <h3> 2. ECLIPSIA </h3>
+                    <h3> Eclipsia </h3>
                 </div>
 
                 <div class="rightM">
@@ -96,7 +95,7 @@
 
                 <p>
 
-                    — For this project, I was tasked with creating a drug that would adapt to the reality of the future. I went through a lot of possibilities of drugs that I wanted to create and I finally landed on Eclipsia: a drug that makes you forget, not care, and apathetic. I think my drug plays into a lot of curent fears of people thinking that we are getting dumber and more and more tech-reliant. There is also a lot of infromation that we consume on a daily basis that has given rise to attention related illness such as ADHD, making life very overwhleming. Some people may also have experienced a trauma that they want to forget or not think about and this drug gives them that ability. It is pertect solution to how over-stimulating the world is and by proxy, our brains are. <br>
+                   For this project, I was tasked with creating a drug that would adapt to the reality of the future. I went through a lot of possibilities of drugs that I wanted to create and I finally landed on Eclipsia: a drug that makes you forget, not care, and apathetic. I think my drug plays into a lot of curent fears of people thinking that we are getting dumber and more and more tech-reliant. There is also a lot of infromation that we consume on a daily basis that has given rise to attention related illness such as ADHD, making life very overwhleming. Some people may also have experienced a trauma that they want to forget or not think about and this drug gives them that ability. It is pertect solution to how over-stimulating the world is and by proxy, our brains are. <br>
 
                 </p>
 
@@ -111,19 +110,28 @@
                     — Adobe Audition 
                 </p>
 
-                <a href="#" class="work">
-                    <img src="eclipsia-fol/eclipse.jpg" alt="">
-                </a>
+                <div class="stock">
 
-                <br>
-
-                <a href="#" class="work">
-                    <img src="eclipsia-fol/bomb.jpg" alt="">
-                </a>
-
-                <br>
-                <br>
-                <br>
+                    <div class="slideshow">
+                        <div class="slide">
+                            <img src="eclipsia-fol/eclipse.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="eclipsia-fol/bomb.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="eclipsia-fol/mosquito.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="eclipsia-fol/death.jpg" alt="">
+                        </div>
+    
+                
+                        <!-- Navigation arrows -->
+                        <a class="prev" onclick="changeSlide(-1)">←</a>
+                        <a class="next" onclick="changeSlide(1)">→</a>
+                    </div>
+                <br><br>
 
                 <p>
                     I wanted my short film to reek of satire and irony because while it would be great to not care about anything, it would eventually cause society to collapse. I wanted my presentation to be in the form of a short film, without any spoken audio so that the viewer can form their own opion based on what they see. I also placed a lot of attention to the coloring of the videos and the audios that accompanied the visuals. The approach, really, was to confuse the audience because life gets confusing and mundane in a different way after using the drug. <br>
@@ -131,28 +139,33 @@
 
                 </p>
 
-                <br>
-
-
-                <a href="#" class="work">
-                    <img src="eclipsia-fol/death.jpg" alt="">
-                </a>
-
-                <br>
-                <br>
-
-                <a href="#" class="work">
-                    <img src="eclipsia-fol/mosquito.jpg" alt="">
-                </a>
-              
-                <br>
-
 
             </div>
 
         </section>
 
     </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+        
+        function changeSlide(n) {
+            currentSlide += n;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            showSlide(currentSlide);
+        }
+        
+        // Show the first slide initially
+        showSlide(currentSlide);
+    </script>
 
 </body>
 
